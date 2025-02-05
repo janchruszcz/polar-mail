@@ -170,6 +170,10 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Future Improvements
 
+- Email generation in a background job
+- Add rate limiting, request/prompt caching
+- Add error handling
+- Add email validation
 - Add user authentication
 - Upgrade test suite
 - Refine UI/UX
