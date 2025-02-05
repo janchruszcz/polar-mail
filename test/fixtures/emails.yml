@@ -1,17 +1,20 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  purpose: MyText
-  recipient_info: MyText
-  sender_info: MyText
+valid_email:
+  purpose: "Business proposal"
+  recipient_info: "John Doe, CEO of Tech Corp"
+  sender_info: "Jane Smith, Sales Manager"
   parameters: 
-  content: MyText
-  subject: MyString
+    tone: "professional"
+    language: "en"
+  subject: "Exciting Business Opportunity"
+  content: "Dear Mr. Doe,\n\nI hope this email finds you well..."
 
-two:
-  purpose: MyText
-  recipient_info: MyText
-  sender_info: MyText
+invalid_email:
+  purpose: ""  # Invalid email for testing
+  recipient_info: ""
+  sender_info: ""
   parameters: 
-  content: MyText
-  subject: MyString
+    tone: "professional"
+  subject: ""
+  content: ""
