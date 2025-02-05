@@ -1,4 +1,36 @@
-<div>
-  <h1 class="font-bold text-4xl">Emails#show</h1>
-  <p>Find me in app/views/emails/show.html.erb</p>
+<div class="max-w-3xl mx-auto">
+  <div class="bg-white shadow sm:rounded-lg">
+    <div class="px-4 py-5 sm:p-6">
+      <div class="mb-6">
+        <h1 class="text-lg leading-6 font-medium text-gray-900">Generated Email</h1>
+        <p class="mt-1 text-sm text-gray-500">
+          Generated at: <%= @email.email_history&.generated_at&.strftime("%B %d, %Y at %I:%M %p") %>
+        </p>
+      </div>
+
+      <div class="border rounded-md p-4 mb-6 bg-gray-50">
+        <h2 class="text-sm font-medium text-gray-700 mb-2">Purpose</h2>
+        <p class="text-sm text-gray-900"><%= @email.purpose %></p>
+      </div>
+
+      <div class="border rounded-md p-4">
+        <div class="mb-4">
+          <h2 class="text-sm font-medium text-gray-700">Subject</h2>
+          <p class="mt-1 text-sm text-gray-900"><%= @email.subject %></p>
+        </div>
+
+        <div>
+          <h2 class="text-sm font-medium text-gray-700 mb-2">Content</h2>
+          <div class="prose max-w-none">
+            <%= simple_format(@email.content, class: "text-sm text-gray-900") %>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end space-x-3">
+        <%= link_to "Back to List", emails_path, class: "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
+        <%= link_to "Generate New Email", new_email_path, class: "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
+      </div>
+    </div>
+  </div>
 </div>
